@@ -44,7 +44,7 @@ export function Palidromos() {
       </form>
 
       <div>
-        <h1>Palíndromos de {number} :</h1>
+        <h1>Palíndromos de {number ?? 0} :</h1>
         {palindromos.map(item => (item + ' - '))}
         </div>
     </>
