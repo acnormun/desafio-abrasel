@@ -15,7 +15,7 @@ import axios from "axios";
 
 const baseUrl = "https://viacep.com.br/ws/";
 export function Cep() {
-  const { register, handleSubmit, watch } = useForm();
+  const { register, handleSubmit} = useForm();
   const [ceps, setCeps] = useState<any>({});
   const [dados, setDados] = useState<any>([])
 
