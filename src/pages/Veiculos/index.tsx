@@ -27,7 +27,7 @@ export function Veiculos() {
   const [veiculos, setVeiculos] = useState<Array<any>>([]);
 
   function handleSubmitForm(e: unknown) {
-    axios.post(baseUrl, e).then(({ data }) => setVeiculos(data));
+    axios.post(baseUrl, e).then(({ data }) => setVeiculos(data)).catch(() => alert('Veículo já cadastrado!'));
   }
 
   useEffect(() => {
