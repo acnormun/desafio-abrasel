@@ -123,14 +123,14 @@ export function Veiculos() {
             {veiculos.map((item) => {
               return (
                 <Tr key={item.id}>
-                  <Td>{item.id}</Td>
-                  <Td>{item.tipo}</Td>
-                  <Td>{item.marca}</Td>
-                  <Td>{item.modelo}</Td>
-                  <Td>{item.ano}</Td>
-                  <Td>{item.qtdPortas ?? "-"}</Td>
-                  <Td>{item.rodas ?? 4}</Td>
-                  <Td>{item.passageiros ?? "-"}</Td>
+                  <Td color="white">{item.id}</Td>
+                  <Td color="white">{item.tipo}</Td>
+                  <Td color="white">{item.marca}</Td>
+                  <Td color="white">{item.modelo}</Td>
+                  <Td color="white">{item.ano}</Td>
+                  <Td color="white">{item.qtdPortas ?? "-"}</Td>
+                  <Td color="white">{item.rodas ?? 4}</Td>
+                  <Td color="white">{item.passageiros ?? "-"}</Td>
                 </Tr>
               );
             })}
