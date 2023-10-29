@@ -1,18 +1,27 @@
-import { Button } from "@chakra-ui/react";
+import {
+  Button,
+  Table,
+  TableContainer,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+} from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { Container, FormContainer, InputData, SelectInput } from "./styles";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const baseUrl = "https://raw.githubusercontent.com/acnormun/desafio-abrasel/main/api/veiculos.json";
+const baseUrl = "http://localhost:3030/veiculos";
 
 export function Veiculos() {
   const { register, handleSubmit, watch } = useForm();
   const tipo = watch("tipo");
-  const [veiculos, setVeiculos] = useState();
+  const [veiculos, setVeiculos] = useState<Array<any>>([]);
 
-  function handleSubmitForm(e) {
-    console.log(e);
+  function handleSubmitForm(e: unknown) {
+    axios.post(baseUrl, e).then(({ data }) => setVeiculos(data));
   }
 
   useEffect(() => {
@@ -28,12 +37,12 @@ export function Veiculos() {
             <option value="carro">Carro</option>
             <option value="moto">Moto</option>
           </SelectInput>
-          <label htmlFor="placa">Placa: </label>
+          <label htmlFor="id">Placa: </label>
           <InputData
             type="text"
-            id="placa"
+            id="id"
             placeholder="XXX-0000"
-            {...register("placa")}
+            {...register("id")}
             required
           />
           <label htmlFor="ano">Ano: </label>
@@ -89,9 +98,36 @@ export function Veiculos() {
         <Button type="submit">Enviar</Button>
       </form>
 
-      {JSON.stringify(veiculos.data)}
-
-
+      <TableContainer>
+        <Table variant="simple">
+          <Thead>
+            <Tr>
+              <Th>Placa</Th>
+              <Th> Tipo</Th>
+              <Th>Marca</Th>
+              <Th>Modelo</Th>
+              <Th>Ano</Th>
+              <Th>Portas</Th>
+              <Th>Rodas</Th>
+              <Th>Passageiros</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            {veiculos.map(item => {
+             return  <Tr>
+                <Td>{item.id}</Td>
+                <Td>{item.tipo}</Td>
+                <Td>{item.marca}</Td>
+                <Td>{item.modelo}</Td>
+                <Td>{item.ano}</Td>
+                <Td>{item.qtdPortas ?? '-'}</Td>
+                <Td>{item.rodas ?? 4 }</Td>
+                <Td>{item.passageiros ?? '-'}</Td>
+              </Tr>
+            })}
+          </Tbody>
+        </Table>
+      </TableContainer>
     </Container>
   );
 }
