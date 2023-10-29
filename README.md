@@ -6,6 +6,10 @@
 
 #### 2- Clonar o presente repositório 👯‍♀️;
 
-#### 3 - run `npm run dev` 👩‍💻;
+#### 3 - Instalar as dependências - `npm install` 🔑;
 
-#### 4 - Abrir http://localhost:5173/;
+#### 4 - run `npm run dev` 👩‍💻;
+
+#### 5 - Abrir http://localhost:5173/;
+
+#### Prontinho! 🫰
