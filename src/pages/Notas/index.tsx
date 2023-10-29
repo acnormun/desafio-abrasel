@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { FormContainer, InputData } from "../Palidromo/styles";
 import { INotas, ITroco } from "../../interfaces/INotas";
-import { Container } from "../Veiculos/styles";
 
 export function Notas() {
   const { register, handleSubmit, watch} = useForm();

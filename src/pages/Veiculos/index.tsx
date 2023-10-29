@@ -114,7 +114,7 @@ export function Veiculos() {
           </Thead>
           <Tbody>
             {veiculos.map(item => {
-             return  <Tr>
+             return  <Tr key={item.id}>
                 <Td>{item.id}</Td>
                 <Td>{item.tipo}</Td>
                 <Td>{item.marca}</Td>

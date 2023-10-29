@@ -2,6 +2,7 @@ import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import { Palidromos } from "./Palidromo";
 import { Notas } from "./Notas";
 import { Veiculos } from "./Veiculos";
+import { Cep } from "./CEP";
 
 export function Home() {
   return (
@@ -11,6 +12,7 @@ export function Home() {
           <Tab >Palindromo</Tab>
           <Tab>Notas</Tab>
           <Tab>Veículos</Tab>
+          <Tab>CEP</Tab>
         </TabList>
 
         <TabPanels>
@@ -22,6 +24,9 @@ export function Home() {
           </TabPanel>
           <TabPanel>
             <Veiculos/>
+          </TabPanel>
+          <TabPanel>
+            <Cep/>
           </TabPanel>
         </TabPanels>
       </Tabs>
