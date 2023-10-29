@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     padding: 1rem;
-    gap: 1rem;
-    font-size: .8rem
+    font-size: .8rem;
+    gap: 3rem
+
 `
 
 export const FormContainer = styled.div`
@@ -20,6 +23,14 @@ export const FormContainer = styled.div`
   font-size: 1rem;
   font-weight: bold;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    font-size: 2rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center
+  }
 `;
 
 const BaseInput = styled.input`
@@ -38,7 +49,7 @@ const BaseInput = styled.input`
   }
 
   &::placeholder {
-    color: ${(props) => props.theme["gray-500"]};
+    color: ${(props) => props.theme["gray-100"]};
   }
 `;
 
@@ -53,6 +64,14 @@ export const SelectInput = styled.select`
   color: black;
   font-size: 1rem;
   font-weight: bold;
+
+`
+
+export const ButtonField = styled.div`
+display: flex;
+width: 100%;
+justify-content: center;
+align-items: center
 
 `
 export const TableData = styled.div`

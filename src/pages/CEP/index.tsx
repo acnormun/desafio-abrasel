@@ -94,21 +94,21 @@ export function Cep() {
         <Table variant="simple">
           <Thead>
             <Tr>
-              <Th>CEP</Th>
-              <Th>Cidade</Th>
-              <Th>UF</Th>
-              <Th>Bairro</Th>
-              <Th>Logrfadouro</Th>
+              <Th color="white">CEP</Th>
+              <Th color="white" >Cidade</Th>
+              <Th color="white">UF</Th>
+              <Th color="white">Bairro</Th>
+              <Th color="white">Logradouro</Th>
             </Tr>
           </Thead>
           <Tbody>
             {dados.map(item => {
              return  <Tr key={item.id}>
-                <Td>{item.cep ?? '-'}</Td>
-                <Td>{item.localidade ?? '-'}</Td>
-                <Td>{item.uf ?? '-'}</Td>
-                <Td>{item.bairro ?? '-'}</Td>
-                <Td>{item.logradouro}</Td>
+                <Td color="white">{item.cep ?? '-'}</Td>
+                <Td color="white" >{item.localidade ?? '-'}</Td>
+                <Td color="white">{item.uf ?? '-'}</Td>
+                <Td color="white">{item.bairro ?? '-'}</Td>
+                <Td color="white">{item.logradouro}</Td>
               </Tr>
             })}
           </Tbody>

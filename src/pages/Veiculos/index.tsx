@@ -9,7 +9,13 @@ import {
   Tr,
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
-import { Container, FormContainer, InputData, SelectInput } from "./styles";
+import {
+  ButtonField,
+  Container,
+  FormContainer,
+  InputData,
+  SelectInput,
+} from "./styles";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -94,36 +100,39 @@ export function Veiculos() {
             </SelectInput>
           </FormContainer>
         )}
-
-        <Button type="submit">Enviar</Button>
+        <ButtonField>
+          <Button type="submit">Enviar</Button>
+        </ButtonField>
       </form>
 
       <TableContainer>
-        <Table variant="simple">
+        <Table variant="simple" colorScheme="facebook">
           <Thead>
             <Tr>
-              <Th>Placa</Th>
-              <Th> Tipo</Th>
-              <Th>Marca</Th>
-              <Th>Modelo</Th>
-              <Th>Ano</Th>
-              <Th>Portas</Th>
-              <Th>Rodas</Th>
-              <Th>Passageiros</Th>
+              <Th color="white">Placa</Th>
+              <Th color="white"> Tipo</Th>
+              <Th color="white">Marca</Th>
+              <Th color="white">Modelo</Th>
+              <Th color="white">Ano</Th>
+              <Th color="white">Portas</Th>
+              <Th color="white">Rodas</Th>
+              <Th color="white">Passageiros</Th>
             </Tr>
           </Thead>
           <Tbody>
-            {veiculos.map(item => {
-             return  <Tr key={item.id}>
-                <Td>{item.id}</Td>
-                <Td>{item.tipo}</Td>
-                <Td>{item.marca}</Td>
-                <Td>{item.modelo}</Td>
-                <Td>{item.ano}</Td>
-                <Td>{item.qtdPortas ?? '-'}</Td>
-                <Td>{item.rodas ?? 4 }</Td>
-                <Td>{item.passageiros ?? '-'}</Td>
-              </Tr>
+            {veiculos.map((item) => {
+              return (
+                <Tr key={item.id}>
+                  <Td>{item.id}</Td>
+                  <Td>{item.tipo}</Td>
+                  <Td>{item.marca}</Td>
+                  <Td>{item.modelo}</Td>
+                  <Td>{item.ano}</Td>
+                  <Td>{item.qtdPortas ?? "-"}</Td>
+                  <Td>{item.rodas ?? 4}</Td>
+                  <Td>{item.passageiros ?? "-"}</Td>
+                </Tr>
+              );
             })}
           </Tbody>
         </Table>

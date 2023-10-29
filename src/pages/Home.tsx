@@ -7,12 +7,12 @@ import { Cep } from "./CEP";
 export function Home() {
   return (
     <>
-      <Tabs color="white">
-        <TabList>
-          <Tab >Palindromo</Tab>
-          <Tab>Notas</Tab>
-          <Tab>Veículos</Tab>
-          <Tab>CEP</Tab>
+      <Tabs variant='enclosed' colorScheme='green'>
+        <TabList color={"white"}>
+          <Tab _selected={{color: 'white', bg:'#F1BA45'}} style={{color: "white"}}>Palindromo</Tab>
+          <Tab _selected={{color: 'white',bg:'#F1BA45'}} style={{color: "white"}}>Notas</Tab>
+          <Tab _selected={{color: 'white', bg:'#F1BA45'}} style={{color: "white"}}>Veículos</Tab>
+          <Tab _selected={{color: 'white', bg:'#F1BA45'}} style={{color: "white"}}>CEP</Tab>
         </TabList>
 
         <TabPanels>

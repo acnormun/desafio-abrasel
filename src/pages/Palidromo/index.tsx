@@ -1,5 +1,5 @@
 import { Button } from "@chakra-ui/react";
-import { FormContainer, InputData } from "./styles";
+import { FormContainer, InputData, ShowData } from "./styles";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { IPalindromo } from "../../interfaces/IPalindromo";
@@ -43,10 +43,10 @@ export function Palidromos() {
         </FormContainer>
       </form>
 
-      <div>
+      <ShowData>
         <h1>Palíndromos de {number ?? 0} :</h1>
         {palindromos.map(item => (item + ' - '))}
-        </div>
+        </ShowData>
     </>
   );
 }

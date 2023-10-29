@@ -20,7 +20,7 @@ const BaseInput = styled.input`
   font-weight: bold;
   font-size: 1.125rem;
   padding: 0 0.5rem;
-  color: ${(props) => props.theme["gray-100"]};
+  color: ${(props) => props.theme["white"]};
 
   &:focus {
     box-shadow: none;
@@ -28,7 +28,7 @@ const BaseInput = styled.input`
   }
 
   &::placeholder {
-    color: ${(props) => props.theme["gray-500"]};
+    color: ${(props) => props.theme["gray-100"]};
   }
 `;
 
@@ -36,3 +36,10 @@ export const InputData = styled(BaseInput)`
   width: 4rem;
 `;
 
+export const ShowData = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  padding: 2rem;
+  gap: 1rem;
+`;

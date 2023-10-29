@@ -1,7 +1,7 @@
 import { Button } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { FormContainer, InputData } from "../Palidromo/styles";
+import { FormContainer, InputData, ShowData } from "../Palidromo/styles";
 import { INotas, ITroco } from "../../interfaces/INotas";
 
 export function Notas() {
@@ -55,12 +55,12 @@ export function Notas() {
         </FormContainer>
       </form>
 
-      <div>
+      <ShowData>
         <p>Troco: {notas.troco ?? 0}</p>
         <p>Notas de 100: {notas.notas_100 ?? 0}</p>
         <p>Notas de 10: {notas.notas_10 ?? 0}</p>
         <p>Notas de 1: {notas.notas_1 ?? 0}</p>
-      </div>
+      </ ShowData>
 
     </>
   );
