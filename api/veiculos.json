@@ -1,7 +1,6 @@
 {
     "message": "Dados retornados com sucesso!",
-    "data": {
-        "carros": [
+    "data": [
             {
                 "id" : "AAA-0102",
                 "modelo" : "Prisma",
@@ -9,9 +8,7 @@
                 "marca" : "Chevrolet",
                 "tipo" : "carro",
                 "qtdPortas" : 4
-            }
-        ],
-        "motos" : [
+            },
             {
                 "id": "BBB-0304",
                 "modelo" : "Fat Boy",
@@ -22,5 +19,4 @@
                 "passageiros": 2
             }
         ]
-    }
 }

@@ -1,5 +1,5 @@
 import { Button } from "@chakra-ui/react";
-import { FormContainer, MinutesAmoundInput } from "./styles";
+import { FormContainer, InputData } from "./styles";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { IPalindromo } from "../../interfaces/IPalindromo";
@@ -29,7 +29,7 @@ export function Palidromos() {
       <form onSubmit={handleSubmit(handleSubmitNumber)}>
         <FormContainer>
           <label htmlFor="number">Selecione um número</label>
-          <MinutesAmoundInput
+          <InputData
             type="number"
             id="number"
             placeholder="00"

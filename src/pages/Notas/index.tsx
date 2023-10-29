@@ -1,8 +1,9 @@
 import { Button } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { FormContainer, MinutesAmoundInput } from "../Palidromo/styles";
+import { FormContainer, InputData } from "../Palidromo/styles";
 import { INotas, ITroco } from "../../interfaces/INotas";
+import { Container } from "../Veiculos/styles";
 
 export function Notas() {
   const { register, handleSubmit, watch} = useForm();
@@ -34,7 +35,7 @@ export function Notas() {
       <form onSubmit={handleSubmit(handleSubmitPagamento)}>
         <FormContainer>
           <label htmlFor="valor_compra">Insira o valor da compra: </label>
-          <MinutesAmoundInput
+          <InputData
             type="number"
             id="valor_compra"
             placeholder="00"
@@ -42,7 +43,7 @@ export function Notas() {
             {...register("valor_compra", { valueAsNumber: true })}
           />
            <label htmlFor="valor_pago">Insira o valor pago: </label>
-          <MinutesAmoundInput
+          <InputData
             type="number"
             id="valor_pago"
             placeholder="00"
