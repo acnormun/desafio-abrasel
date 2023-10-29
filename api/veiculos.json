@@ -1,0 +1,26 @@
+{
+    "message": "Dados retornados com sucesso!",
+    "data": {
+        "carros": [
+            {
+                "id" : "AAA-0102",
+                "modelo" : "Prisma",
+                "anoFabricacao": 2007,
+                "marca" : "Chevrolet",
+                "tipo" : "carro",
+                "qtdPortas" : 4
+            }
+        ],
+        "motos" : [
+            {
+                "id": "BBB-0304",
+                "modelo" : "Fat Boy",
+                "anoFabricacao": 2015,
+                "marca": "Harley Davidson",
+                "tipo": "moto",
+                "rodas": 2,
+                "passageiros": 2
+            }
+        ]
+    }
+}
